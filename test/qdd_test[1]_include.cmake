@@ -1,0 +1,5 @@
+if(EXISTS "/home/nayuta/qdd-2-dev-wheel-action/QDD/test/qdd_test[1]_tests.cmake")
+  include("/home/nayuta/qdd-2-dev-wheel-action/QDD/test/qdd_test[1]_tests.cmake")
+else()
+  add_test(qdd_test_NOT_BUILT qdd_test_NOT_BUILT)
+endif()
