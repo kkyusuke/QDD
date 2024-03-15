@@ -44,11 +44,11 @@ where = [""]
 [tool.cibuildwheel]
 
 build = "cp310-manylinux_x86_64"
-#bbefore-build = "cmake . -DCMAKE_BUILD_TYPE=Release && cmake --build . -j"
+before-build = "cmake . -DCMAKE_BUILD_TYPE=Release && cmake --build . -j"
 # build = "cp3{8,9,10}-manylinux_x86_64 cp3{8,9,10}-musllinux_x86_64"
 #   "Programming Language :: Python :: 3.8",
 #  "Programming Language :: Python :: 3.9",
-manylinux-x86_64-image = "manylinux_2_24"
+manylinux-x86_64-image = "manylinux_2_28"
 
 # [tool.cibuildwheel.linux]
 # repair-wheel-command = ""
