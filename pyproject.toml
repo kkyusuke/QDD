@@ -52,4 +52,3 @@ manylinux-x86_64-image = "manylinux_2_28"
 
 # [tool.cibuildwheel.linux]
 # repair-wheel-command = ""
-manylinux_2_28
