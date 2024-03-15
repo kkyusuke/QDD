@@ -6,6 +6,8 @@ class BinaryDistribution(Distribution):
         return True
 
 setup(
-    include_package_data=True,
+    
     distclass=BinaryDistribution,
 )
+
+# include_package_data=True,

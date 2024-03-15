@@ -34,6 +34,13 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
 ]
 
+[tool.setuptools]
+include-package-data = true
+[tool.setuptools.packages.find]
+where = [""]
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
 [tool.cibuildwheel]
 
 build = "cp310-manylinux_x86_64"
@@ -43,5 +50,5 @@ build = "cp310-manylinux_x86_64"
 #  "Programming Language :: Python :: 3.9",
 
 
-[tool.cibuildwheel.linux]
-repair-wheel-command = ""
+# [tool.cibuildwheel.linux]
+# repair-wheel-command = ""
