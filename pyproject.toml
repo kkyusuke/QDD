@@ -43,3 +43,5 @@ build = "cp310-manylinux_x86_64"
 #  "Programming Language :: Python :: 3.9",
 
 
+[tool.cibuildwheel.linux]
+repair-wheel-command = ""
