@@ -13,6 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Build command 1
+      run: cmake . -DCMAKE_BUILD_TYPE=Release
+    - name: Build command 2
+      run: cmake --build . -j
+
     # Build by cibuildwheel
     - uses: actions/checkout@v4
     - name: Build wheels
