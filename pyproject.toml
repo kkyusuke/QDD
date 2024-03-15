@@ -39,7 +39,7 @@ include-package-data = true
 [tool.setuptools.packages.find]
 where = [""]
 [tool.setuptools.package-data]
-"*" = ["*.*"]
+"qdd" = ["*.so]
 
 [tool.cibuildwheel]
 
