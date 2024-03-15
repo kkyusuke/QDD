@@ -52,4 +52,4 @@ manylinux-x86_64-image = "manylinux_2_24"
 
 # [tool.cibuildwheel.linux]
 # repair-wheel-command = ""
-repair-wheel-command = "auditwheel repair --verbose -w {dest_dir} {wheel}"
+repair-wheel-command = "auditwheel repair -v -w {dest_dir} {wheel}"
