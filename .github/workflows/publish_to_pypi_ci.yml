@@ -3,7 +3,7 @@ name: Publish Python distribution to TestPyPI
 on: 
   push:
     branches:
-      - 'feature/2-wheel-action-action'
+      - 'feature/1-wheel-action-scikit-build'
 
 jobs:
   build:
