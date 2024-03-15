@@ -7,7 +7,7 @@ class BinaryDistribution(Distribution):
 
 setup(
     name='qdd',
-    packages=['qdd'],
+    packages=['pyQDD'],
     include_package_data=True,
     distclass=BinaryDistribution,
 )
