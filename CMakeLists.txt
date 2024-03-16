@@ -4,7 +4,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 project(QDD)
 
-cmake_policy(VERSION 3.26)
+
 get_filename_component(USER $ENV{HOME} NAME)
 
 
