@@ -31,7 +31,19 @@ license = {file = "LICENSE.txt"}
 
 classifiers = [
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
+]
+
+dependencies = [
+    "qiskit-aer>=0.13.3",
+    "qiskit-machine-learning[sparse]>=0.6.0",
+    "qiskit-algorithms==0.3.0",
+    "qiskit-finance>=0.4.0",
+    "qiskit-optimization>=0.6.0",
+    "qiskit-nature[pyscf]>=0.7.2",
+    "tweedledum>=1.1.1",
 ]
 
 [tool.setuptools]
@@ -43,14 +55,13 @@ where = [""]
 
 [tool.cibuildwheel]
 
-#build = "cp310-manylinux_x86_64"
+build = "cp310-manylinux_x86_64"
 before-build = "cmake . -DCMAKE_BUILD_TYPE=Release && cmake --build . -j"
 #build = "cp3{8,9,10}-manylinux_x86_64 cp3{8,9,10}-musllinux_x86_64"
-build = "cp3{8,9,10}-manylinux_x86_64"
+#build = "cp3{8,9,10}-manylinux_x86_64"
 #   "Programming Language :: Python :: 3.8",
 #  "Programming Language :: Python :: 3.9",
 manylinux-x86_64-image = "manylinux_2_28"
 
 # [tool.cibuildwheel.linux]
-# repair-wheel-command = ""
 repair-wheel-command = "auditwheel -v repair -w {dest_dir} {wheel}"
