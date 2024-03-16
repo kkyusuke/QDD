@@ -53,7 +53,7 @@ add_subdirectory(test)
 
 option(BINDINGS "Configure for building Python bindings" ON)
 if (BINDINGS)
-  find_package(Python 3.10 REQUIRED COMPONENTS Interpreter Development)
+  find_package(Python COMPONENTS Interpreter Development)
   FetchContent_Declare(
     pybind11
     GIT_REPOSITORY https://github.com/pybind/pybind11
