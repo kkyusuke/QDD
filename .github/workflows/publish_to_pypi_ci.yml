@@ -21,9 +21,12 @@ jobs:
     # Build by cibuildwheel
     - name: Build wheels
       uses: pypa/cibuildwheel@v2.16.5
+      env:
+        CIBW_ENVIRONMENT: "CMAKE_ARGS='-DPYTHON_EXECUTABLE=$(which python)'"
 
     - name: Store the distribution packages
       uses: actions/upload-artifact@v3
       with:
         name: python-package-distributions
         path: ./wheelhouse/*.whl
+    
