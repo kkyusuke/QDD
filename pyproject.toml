@@ -57,7 +57,7 @@ where = [""]
 [tool.cibuildwheel]
 
 build = "cp310-manylinux_x86_64"
-before-build = "cmake . -DCMAKE_BUILD_TYPE=Release -DPYBIND11_FINDPYTHON=ON -DPYTHON_EXECUTABLE=$(which python) && cmake --build . -j -DPYBIND11_FINDPYTHON=ON -DPYTHON_EXECUTABLE=$(which python)"
+before-build = "cmake . -DCMAKE_BUILD_TYPE=Release -DPYBIND11_FINDPYTHON=ON -DPYTHON_EXECUTABLE=$(which python) && cmake --build . -j -DPYBIND11_FINDPYTHON=ON -DPYTHON_EXECUTABLE=$(which python) -DPYTHON_INCLUDE_DIR=$(python -c 'from distutils.sysconfig import get_python_inc; print(get_python_inc())') -DPYTHON_LIBRARY=$(python -c 'import distutils.sysconfig as sysconfig; print(sysconfig.get_config_var('LIBDIR'))')/libpython3.10.so"
 #build = "cp3{8,9,10}-manylinux_x86_64 cp3{8,9,10}-musllinux_x86_64"
 #build = "cp3{8,9,10}-manylinux_x86_64"
 #   "Programming Language :: Python :: 3.8",
