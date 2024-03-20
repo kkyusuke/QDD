@@ -13,11 +13,6 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            # - name: Build command 1
-            #   run: cmake . -DCMAKE_BUILD_TYPE=Release
-            # - name: Build command 2
-            #   run: cmake --build . -j
-
             # Check python executable paths
             - name: Echo versions
               run: |
@@ -32,7 +27,7 @@ jobs:
             - name: Build wheels
               uses: pypa/cibuildwheel@v2.16.5
               env:
-                  CIBW_ENVIRONMENT: "CMAKE_ARGS='-DPYTHON_EXECUTABLE=$(which python3.10)'"
+                  #   CIBW_ENVIRONMENT: "CMAKE_ARGS='-DPYTHON_EXECUTABLE=$(which python3.10)'"
                   CIBW_BUILD: 'cp310-manylinux_x86_64'
 
             - name: Store the distribution packages
